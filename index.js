@@ -8,16 +8,19 @@ const emotionsRadio = document.getElementById('emotion-radios')
 function getEmotionsArray(cats){
     const emoList = []
 
+
+
+
     for (let cat of cats){
-        // console.log(cat)
         for (let emotion of cat.emotionTags){
-            emoList.push(emotion)
+            if (!emoList.includes(emotion)) {
+                emoList.push(emotion)  
+            } 
         }
-    }
-    // console.log(emoList)
+    }            // console.log(emoList)
     return emoList
-    
 }
+            
 
 
 // console.log(getEmotionsArray(catsData))
